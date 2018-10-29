@@ -13,7 +13,7 @@ class Handler extends ExceptionHandler
      * @var array
      */
     protected $dontReport = [
-        //
+        InvalidRequestException::class, // 用户请求异常 不需要写入异常日志中
     ];
 
     /**
