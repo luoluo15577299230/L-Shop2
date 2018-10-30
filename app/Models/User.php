@@ -34,4 +34,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified' => 'boolean',
     ];
+
+    // 关联 UserAddress 模型
+    public function addresses() {
+        return $this->hasMany(UserAddress::class);
+    }
 } 
